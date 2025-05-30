@@ -15,10 +15,11 @@
             var vortex = new Attack("Vortex", ElementType.Water,6);
             var o=new List<Attack>() { flamethrower,ember,shock};
 
-            Charmander f = new Charmander("dwsgf", 4, o) { Name ="#"};
+            Charmander f = new(o) { Name ="Charmander", Level = 2};
             Console.WriteLine(f.Name);
             f.Attack();
-
+            Console.WriteLine();
+        
 
 
         }

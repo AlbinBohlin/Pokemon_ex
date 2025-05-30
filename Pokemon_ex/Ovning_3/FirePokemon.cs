@@ -2,7 +2,7 @@
 
 namespace Ovning_3
 {
-    internal class FirePokemon(string name, int level, List<Attack> attacks) : Pokemon(name, level, attacks, ElementType.Fire)
+    internal class FirePokemon( List<Attack> attacks) : Pokemon( attacks, ElementType.Fire)
     {
         
 
@@ -10,7 +10,9 @@ namespace Ovning_3
         {
             foreach (Attack item in Attacks)
             {
+                if (item.Type == ElementType.Fire)
                 Console.WriteLine(item.Use(Level));
+                else Console.WriteLine($"cant use attack of type {item.Type}");
             }
             return "";
         }

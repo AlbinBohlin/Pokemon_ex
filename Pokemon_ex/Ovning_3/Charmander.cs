@@ -1,8 +1,11 @@
 ﻿namespace Ovning_3
 {
-    internal class Charmander(string name,int level, List<Attack> attacks) :FirePokemon(name,level,attacks)
+    internal class Charmander( List<Attack> attacks) :FirePokemon( attacks)
     {
-        
-        
+
+        public override string Attack()
+        {
+            return base.Attack();
+        }
     }
 }
