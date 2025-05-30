@@ -16,6 +16,7 @@
             var o=new List<Attack>() { flamethrower,ember,shock};
 
             Charmander f = new Charmander("dwsgf", 4, o) { Name ="#"};
+            var c = new Squirtle("dwsgf", 4, o) { Name = "#" };
             Console.WriteLine(f.Name);
             f.Attack();
 
