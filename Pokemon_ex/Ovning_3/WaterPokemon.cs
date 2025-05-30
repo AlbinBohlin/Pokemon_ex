@@ -1,6 +1,6 @@
 ﻿namespace Ovning_3
 {using Utils;
-    internal class WaterPokemon(string name, int level, List<Attack> attacks) : Pokemon(name, level, attacks, ElementType.Water)
+    internal class WaterPokemon( List<Attack> attacks) : Pokemon(attacks, ElementType.Water)
     {
         public override string Attack()
         {

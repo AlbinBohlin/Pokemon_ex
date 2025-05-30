@@ -2,7 +2,7 @@
 {
   
     using Utils;
-    internal class Squirtle(string name,int level, List<Attack> attacks) :WaterPokemon(name, level, attacks)
+    internal class Squirtle( List<Attack> attacks) :WaterPokemon(attacks)
     {
        
     }

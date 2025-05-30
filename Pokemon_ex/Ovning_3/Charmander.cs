@@ -1,11 +1,12 @@
 ﻿namespace Ovning_3
 {using Utils;
-    internal class Charmander(string name, int level, List<Attack> attacks) : FirePokemon(name, level, attacks), IEvolvable
+    internal class Charmander(List<Attack> attacks) : FirePokemon(attacks), IEvolvable
     {
         public void Evolve()
         {
             string new_name = "Charmeleon";
-            Console.WriteLine(" is evolving... Now it's Raichu! Level 25!");
+            base.Level += 10;
+            base.Evolve(new_name);
         }
     }
 }

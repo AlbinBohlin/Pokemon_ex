@@ -2,7 +2,7 @@
 {
     
     using Utils;
-    internal class ElectricPokemon(string name, int level, List<Attack> attacks) : Pokemon(name, level, attacks, ElementType.Electric)
+    internal class ElectricPokemon(List<Attack> attacks) : Pokemon( attacks, ElementType.Electric)
     {
         public override string Attack()
         {

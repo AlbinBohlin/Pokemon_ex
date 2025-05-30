@@ -2,7 +2,7 @@
 
 namespace Ovning_3
 {
-    internal class FirePokemon(string name, int level, List<Attack> attacks) : Pokemon(name, level, attacks, ElementType.Fire)
+    internal class FirePokemon(List<Attack> attacks) : Pokemon(attacks, ElementType.Fire)
     {
         
 

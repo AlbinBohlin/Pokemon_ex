@@ -2,6 +2,6 @@
 {
     public interface IEvolvable
     {
-        void Evolve();
+        void Evolve(string newName);
     }
 }

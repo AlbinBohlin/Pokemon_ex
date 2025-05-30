@@ -2,10 +2,10 @@
 
 namespace Ovning_3
 {
-    public abstract class Pokemon( string name , int level, List<Attack> attacks, ElementType elementType)
+    public abstract class Pokemon( List<Attack> attacks, ElementType elementType) : IEvolvable
     {
-        public required string Name { get; set; } = name;
-        public int Level { get; set; } = level;
+        public required string Name { get; set; } 
+        public required int Level { get; set; }
         private readonly ElementType element = elementType;
         public List<Attack> Attacks = attacks;
 
@@ -17,6 +17,13 @@ namespace Ovning_3
             //This should increment the level and print:
 
             Console.WriteLine($"{Name} leveled up to {Level}!");
+        }
+
+        public void Evolve(string newName)
+        {   
+            Console.WriteLine($"{Name} is evolving... Now it's {newName}! Level {Level}");
+            Name=newName;
+
         }
     }
 
