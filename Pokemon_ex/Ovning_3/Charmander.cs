@@ -1,6 +1,7 @@
 ﻿namespace Ovning_3
 {
-    internal class Charmander( List<Attack> attacks) :FirePokemon( attacks)
+    using Utils;
+    internal class Charmander( List<Attack<Fire>> attacks) : FirePokemon( attacks) 
     {
 
         public override string Attack()

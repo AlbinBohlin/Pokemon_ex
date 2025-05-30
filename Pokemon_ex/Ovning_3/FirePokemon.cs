@@ -2,17 +2,22 @@
 
 namespace Ovning_3
 {
-    internal class FirePokemon( List<Attack> attacks) : Pokemon( attacks, ElementType.Fire)
+    internal class FirePokemon(List<Attack<Fire>> attacks) : Pokemon(attacks, ElementType.Fire)
     {
+        readonly List<Attack<Fire>> attacks = attacks;
+     
+
+
         
+ 
 
         public override string Attack()
         {
-            foreach (Attack item in Attacks)
+            foreach (var item in Attacks)
             {
-                if (item.Type == ElementType.Fire)
+                //if (item.Type == ElementType.Fire)
                 Console.WriteLine(item.Use(Level));
-                else Console.WriteLine($"cant use attack of type {item.Type}");
+                //else Console.WriteLine($"cant use attack of type {item.Type}");
             }
             return "";
         }

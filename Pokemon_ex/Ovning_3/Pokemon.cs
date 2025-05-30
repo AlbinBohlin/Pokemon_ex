@@ -2,15 +2,16 @@
 
 namespace Ovning_3
 {
-    public abstract class Pokemon( List<Attack> attacks, ElementType elementType)
+    public abstract class Pokemon( List<Attack<Fire>>? attacks, ElementType elementType) 
     {
         public required string Name { get; set; }
         public required int Level { get; set; }
         private readonly ElementType element = elementType;
-        public List<Attack> Attacks = attacks;
+        public List<Attack<Fire>>? Attacks = attacks;
 
         public abstract string Attack();
         //  A non-overridable instance method:
+
 
         public void RaiseLevel()
         {

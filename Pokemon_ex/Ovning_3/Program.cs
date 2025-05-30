@@ -7,13 +7,13 @@
     {
         static void Main(string[] args)
         {
-            var flamethrower = new Attack("Flamethrower", ElementType.Fire, 12);
-            var ember = new Attack("Ember", ElementType.Fire, 6);
-            var shock = new Attack("shock", ElementType.Electric, 8);
-            var lightning = new Attack("Lightning", ElementType.Electric, 13);
-            var wave = new Attack("Wave", ElementType.Water, 34);
-            var vortex = new Attack("Vortex", ElementType.Water,6);
-            var o=new List<Attack>() { flamethrower,ember,shock};
+            var flamethrower = new Attack<Fire>(Fire.Flamethrower);
+          /*  var ember = new Attack<Fire>("Ember", 6);
+            var shock = new Attack<Electric>("shock",  8);
+            var lightning = new Attack<Electric>("Lightning", 13);
+            var wave = new Attack<Water>("Wave", 34);
+            var vortex = new Attack<Water>("Vortex",6);*/
+            var o=new List<Attack<Fire>>() { flamethrower,};
 
             Charmander f = new(o) { Name ="Charmander", Level = 2};
             Console.WriteLine(f.Name);
