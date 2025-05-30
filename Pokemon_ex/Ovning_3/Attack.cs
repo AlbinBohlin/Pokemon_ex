@@ -1,17 +1,16 @@
 ﻿namespace Ovning_3
 {
+    using System;
     using Utils;
-    internal class Attack
+    public class Attack(string name, ElementType e, int basePower)
     {
-        public string Name {  get; private set; }
-        private readonly ElementType attackElement;
-        public int BasePower { get; private set; }
+        public string Name { get; private set; } = name;
+        public ElementType Type { get; private set; } = e;
+        public int BasePower { get; private set; } = basePower;
 
-        public Attack(string name, ElementType elementType, int basePower)
+        public string Use(int level)
         {
-            Name = name;
-            attackElement = elementType;
-            BasePower = basePower;
+            return $"{Name} hits with total power {BasePower + level}!";
         }
     }
 }

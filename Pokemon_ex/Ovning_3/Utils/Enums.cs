@@ -1,6 +1,6 @@
 ﻿namespace Ovning_3.Utils 
 {
-    enum ElementType 
+    public enum ElementType 
     {
         Fire,
         Water,
