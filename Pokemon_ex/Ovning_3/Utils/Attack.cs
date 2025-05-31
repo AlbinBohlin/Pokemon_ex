@@ -1,4 +1,4 @@
-﻿namespace Ovning_3
+﻿namespace Ovning_3.Utils
 {
     using System;
     using Utils;

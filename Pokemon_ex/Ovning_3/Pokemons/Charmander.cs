@@ -1,9 +1,8 @@
 ﻿namespace Ovning_3.Pokemons
 {
-    using Ovning_3;
     using Ovning_3.Pokemons.Abstract;
-    using Utils;
-    internal class Charmander(List<Attack> attacks) : FirePokemon(attacks), IEvolvable
+
+    public class Charmander(string name, int level, List<Attack> attacks) : FirePokemon(name, level, attacks)
     {
         //private readonly string[] _evolveTier = ["Charmeleon", "Charizard"];
         public void Evolve()
@@ -15,7 +14,7 @@
         }
         private class Charmeleon(Charmander c) {
             
-            
+            Charmander _c  = c;
 
         } 
         

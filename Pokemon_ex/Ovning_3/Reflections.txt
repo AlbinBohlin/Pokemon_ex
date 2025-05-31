@@ -1,23 +1,32 @@
 Reflections
 
 F: When you create a Pokémon and try to access its fields directly – does it work? Why or why not?
-
+-Yes, i can access it directly from the Instatiated Pokemon object in main() from the object reference. This because the property's get and set methods are marked as public aswell as the property itself. 
+This is bad coding practice.
 
 F: If you later want to add a new property that applies to all Electric-type Pokémon, where should you place it to avoid repetition?
-
+-According to the intructions i would place it in the ElectricPokemon class. **But this is also strange logic. there is no such thing as an electric pokemon.. It should not be concrete. I would replace all the 
+*element*Pokemon with one abstract ElementalPokemon class to handle the elementalstuff.
 
 F: If instead the new property should apply to all Pokémon, where would be the correct place to define it?
-
+-pokemon base class.
 
 F: What happens if you try to add a Charmander to a list that only allows WaterPokemon?
-
+-Compiler Error CS1503; Argument 'argument' cannot convert from Charmander to WaterPokemon
 
 F: You want to store different types of Pokémon – Charmander, Squirtle, and Pikachu – in the same list. What type should the list have for that to work?
-
+-Again, According to the instructions it would need to be a list of Pokemon. But a better way would be to have a sub-class to pokemon "abstract ElementalPokemon" then it could go there. 
+-Or you let the three elemental subclasses to Pokemon implement a shared IElemental interafce and then you could have a list<IElementals> without bothering The top Pokemon class
 
 F: When you loop through the list and call Attack(), what ensures that the correct attack behavior is executed for each Pokémon?
+-Nothing, as per the instructions provided. Unless i missed something. I implemented a check on my own voalition *if(pokemon.elementType==Attack.elementType) but instructions did not specify.
 
 
 F: If you create a method that only exists on Pikachu, why can’t you call it directly when it’s stored in a List<Pokemon>? How could you still access it?
+-Because Pokemon does not have the metod in scope. You could retrieve the object and store it in a Picachu type variable and then call that.
+-If we have a list List<Pokemon> d = [new Pikachu(...)]; we cannot call d.first() containing only 1 element, a Pikachu; we could call ((Pikachu)d.First()).ThisMetodOnlyExistInPikachu(), explixitly casting the type.
+so.. We need to determine the subtype in order to call a class specific method. 
 
 
+            List<Pokemon> d = [new Pikachu("ReflectionTester", 11, new List<Attack>()), ];
+            if (d[0] is Pikachu) ((Pikachu)d.First()).ThisMetodOnlyExistInPikachu();

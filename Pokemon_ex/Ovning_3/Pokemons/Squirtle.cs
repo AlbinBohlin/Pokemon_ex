@@ -1,8 +1,9 @@
 ﻿namespace Ovning_3.Pokemons
 {
-  
-    using Utils;
-    internal class Squirtle( List<Attack> attacks) :WaterPokemon(attacks)
+    using Abstract;
+    using System.Net.Security;
+
+    internal class Squirtle(string name, int level, List<Attack> attacks) : WaterPokemon(name, level, attacks)
     {
        
     }

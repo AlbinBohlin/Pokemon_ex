@@ -1,10 +1,12 @@
-﻿using Ovning_3.Pokemons.Abstract;
-
-namespace Ovning_3.Pokemons
+﻿namespace Ovning_3.Pokemons
 {
-    internal class Pikachu(List<Attack> attacks) : ElectricPokemon( attacks)
+    using Abstract;
+
+    internal class Pikachu(string name, int level, List<Attack> attacks) : ElectricPokemon(name, level, attacks)
     {
 
+        public void ThisMetodOnlyExistInPikachu() { Console.WriteLine("I am accessed from List<Pokemon>"); }
 
     }
+
 }
