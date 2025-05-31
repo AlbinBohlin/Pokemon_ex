@@ -1,6 +1,6 @@
 ﻿namespace Ovning_3
 {
-    
+    using Ovning_3.Pokemons;
     using Utils;
 
     internal class Program

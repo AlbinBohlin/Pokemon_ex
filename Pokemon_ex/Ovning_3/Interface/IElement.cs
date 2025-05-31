@@ -1,8 +1,18 @@
-﻿namespace Ovning_3
+﻿using Ovning_3.Utils;
+
+namespace Ovning_3.Interfaces
 {
-    public interface IElement
-    {
-         string element { get; }
+    /*
+     * This Interface defines all methods and properties pertaining to Elemental stuff.
+     * 
+     * Some Pokemons, once evolved posess more than one element. 
+     * 
+     */
+    public interface IElements
+    {    
+        
+         public List<ElementType> GetTypes {  get; }
+         
 
     }
 }

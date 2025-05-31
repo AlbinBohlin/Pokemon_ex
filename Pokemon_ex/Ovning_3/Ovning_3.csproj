@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pokemons\" />
+    <Using Include="$(MSBuildProjectName).Interface" />
+    <Using Include="$(MSBuildProjectName).Utils" />
   </ItemGroup>
 
 </Project>
