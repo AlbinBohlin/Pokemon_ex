@@ -1,6 +1,6 @@
 ﻿namespace TestPokemon
 {
-    using Ovning_3;
+    using Ovning_3.Actions;
     using Ovning_3.Pokemons.Abstract;
 
     public class UtilTests

@@ -1,8 +1,9 @@
-﻿using Ovning_3.Pokemons.Abstract;
+﻿using Ovning_3.Actions;
+using Ovning_3.Pokemons.Abstract;
 
 namespace Ovning_3.Pokemons
 {
-    internal class Pikachu(List<Attack> attacks) : ElectricPokemon( attacks)
+    internal class Pikachu(ElementType elementType) : ElementalPokemon(elementType)
     {
 
 

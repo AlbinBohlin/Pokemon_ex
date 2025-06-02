@@ -1,5 +1,6 @@
 ﻿namespace Ovning_3
 {
+    using Ovning_3.Actions;
     using Ovning_3.Pokemons;
     using Utils;
 
@@ -15,8 +16,8 @@
             var vortex = new Attack("Vortex", ElementType.Water,6);
             var o=new List<Attack>() { flamethrower,ember,shock};
 
-            Charmander f = new Charmander( o) { Name ="#", Level = 1};
-            var c = new Squirtle(o) { Name = "#", Level = 1 };
+            Charmander f = new Charmander( ) { Name ="#", Level = 1, Attacks = o};
+            var c = new Squirtle() { Name = "#", Level = 1, Attacks = o };
             Console.WriteLine(f.Name);
             f.Attack();
 

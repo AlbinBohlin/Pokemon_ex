@@ -1,8 +1,9 @@
 ﻿namespace Ovning_3.Pokemons
 {
-  
-    using Utils;
-    internal class Squirtle( List<Attack> attacks) :WaterPokemon(attacks)
+    using Ovning_3.Actions;
+    using Abstract;
+
+    internal class Squirtle( ) :ElementalPokemon(ElementType.Water)
     {
        
     }

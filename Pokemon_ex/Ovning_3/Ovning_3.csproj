@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Using Include="$(MSBuildProjectName).Interface" />
     <Using Include="$(MSBuildProjectName).Utils" />
+    <Using Include="Ovning_3.Interfaces" />
   </ItemGroup>
 
 </Project>
