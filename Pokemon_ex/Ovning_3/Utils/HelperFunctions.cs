@@ -1,6 +1,6 @@
-﻿using System.Reflection;
+﻿
 
-namespace Ovning_3
+namespace Ovning_3.Utils
 {
     using Ovning_3.Pokemons;
     using Ovning_3.Pokemons.Abstract;
@@ -8,17 +8,26 @@ namespace Ovning_3
 
     public class Generate
     {
-       
+ 
 
-        static int i=0;
+        public static int RandomInt(int upTo) {return Random.Shared.Next(upTo);}
+        
+        static int i = 0;
         public static Pokemon GenericPokemon()
         {
+            var flamethrower = new Attack("Flamethrower", ElementType.Fire, 12);
+            var ember = new Attack("Ember", ElementType.Fire, 6);
+            var shock = new Attack("shock", ElementType.Electric, 8);
+            var lightning = new Attack("Lightning", ElementType.Electric, 13);
+            var wave = new Attack("Wave", ElementType.Water, 34);
+            var vortex = new Attack("Vortex", ElementType.Water, 6);
             
+
             var factories = new Func<Pokemon>[]
             {
-                () => new Charmander($"Charmander_{i++}",1,new List<Attack>()),
-                () => new Squirtle($"Squirtle_{i++}", 1, new List<Attack>()),
-                () => new Pikachu($"Pikachu_{i++}",1,new List<Attack>()),
+                () => new Charmander($"Charmander_{i++}",1,[flamethrower,ember]),
+                () => new Squirtle($"Squirtle_{i++}", 1, [wave,vortex]),
+                () => new Pikachu($"Pikachu_{i++}",1,[shock, lightning]),
             };
             return factories[Random.Shared.Next(factories.Length)]();
         }

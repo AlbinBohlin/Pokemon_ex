@@ -1,11 +1,7 @@
 ﻿namespace Ovning_3.Pokemons.Abstract
 {
-    public abstract class FirePokemon(string name, int level, List<Attack> attacks) : Pokemon(name, level, attacks, ElementType.Fire), IEvolvable
+    public abstract class FirePokemon(string name, int level, List<Attack> attacks) : Pokemon(name, level, attacks, ElementType.Fire)
     {
-        public void Evolve(string newName)
-        {
-            Console.WriteLine($"{Name} is evolving... Now it's {newName}! Level {Level}");
-            Name = newName;
-        }
+       
     }
 }

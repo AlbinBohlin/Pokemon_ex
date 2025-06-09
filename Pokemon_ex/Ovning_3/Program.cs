@@ -24,28 +24,27 @@
             var c = new Squirtle("Squirty", 1, attacks);
             List<Pokemon> l = [f,c];
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 4; i++)
             {
                 l.Add(Generate.GenericPokemon());
                 
             }
-            f.Name = "fs";
-            foreach (var item in l)
+            foreach (var pokemon in l)
             {
-                Console.WriteLine(item.Name);
-                item.Attacks.First().Use(item.Level);
-                
+                Console.WriteLine(pokemon.Name);
+                pokemon.Attack();
+                //pokemon.RandomAttack();
+                if (pokemon is IEvolvable) ((IEvolvable) pokemon).Evolve();
 
             }
-            Console.WriteLine(l.ToString());
-            Console.WriteLine(f.Name);
-            Console.WriteLine(c.GetType());
-            f.Attack();
+
+
+
             
             
             //Reflections final question
-            List<Pokemon> d = [new Pikachu("RelfectionTester", 11, new List<Attack>()), ];
-            if (d[0] is Pikachu) ((Pikachu)d.First()).ThisMetodOnlyExistInPikachu();
+            //List<Pokemon> d = [new Pikachu("RelfectionTester", 11, new List<Attack>()), ];
+            //if (d[0] is Pikachu) ((Pikachu)d.First()).ThisMetodOnlyExistInPikachu();
          
 
            

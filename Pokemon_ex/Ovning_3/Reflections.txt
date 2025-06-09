@@ -5,8 +5,7 @@ F: When you create a Pokémon and try to access its fields directly – does it wor
 This is bad coding practice.
 
 F: If you later want to add a new property that applies to all Electric-type Pokémon, where should you place it to avoid repetition?
--According to the intructions i would place it in the ElectricPokemon class. **But this is also strange logic. there is no such thing as an electric pokemon.. It should not be concrete. I would replace all the 
-*element*Pokemon with one abstract ElementalPokemon class to handle the elementalstuff.
+-According to the intructions i would place it in the ElectricPokemon class. 
 
 F: If instead the new property should apply to all Pokémon, where would be the correct place to define it?
 -pokemon base class.
