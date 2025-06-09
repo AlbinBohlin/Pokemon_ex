@@ -4,8 +4,10 @@
     using Ovning_3.Actions;
     using Ovning_3.Pokemons.Abstract;
     using Utils;
-    internal class Charmander() : ElementalPokemon(ElementType.Fire), IEvolvable
+    internal class Charmander() : ElementalPokemon(ElementType.Fire)
     {
+        public override bool Evolvable => true;
+
         //private readonly string[] _evolveTier = ["Charmeleon", "Charizard"];
         public void Evolve()
         {
@@ -14,14 +16,15 @@
             Evolve(new_name);
             //this = new Charmeleon(this);
         }
-        private class Charmeleon() : Charmander(), IEvolvable
+        private class Charmeleon() : Charmander()
         {
-            public void Evolve(string newName)
-            {
-                throw new NotImplementedException();
-            }
-            private class Charizard() : Charmeleon { 
-            
+            public override bool Evolvable => true;
+
+
+            private class Charizard() : Charmeleon {
+                public override bool Evolvable => false;
+
+
             }
         }
 

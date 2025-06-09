@@ -6,12 +6,14 @@ namespace Ovning_3.Pokemons.Abstract
      * Base class for all Pokemons
      * Fields are required for easier instantiations and less clutter
      */
-    public abstract class Pokemon(ElementType elementType) 
+    public abstract class Pokemon(ElementType elementType) : IEvolvable
     {
         public required string Name { get; set; } 
         public required int Level { get; set; }
         private readonly ElementType element = elementType;
         public required List<Attack> Attacks { get; set; }
+
+        public abstract bool Evolvable { get; }
 
         public virtual string Attack() {
 
@@ -31,6 +33,7 @@ namespace Ovning_3.Pokemons.Abstract
 
         public void Evolve(string newName)
         {   
+
             Console.WriteLine($"{Name} is evolving... Now it's {newName}! Level {Level}");
             Name=newName;
 

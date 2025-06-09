@@ -12,17 +12,12 @@ namespace Ovning_3.Pokemons.Abstract
        
         private readonly ElementType element = elementType;
      
-
-        
-        //  A non-overridable instance method:
-      
-
-        public void Evolve(string newName)
+        public string ElementSpecificMethod()
         {
-            Console.WriteLine($"{Name} is evolving... Now it's {newName}! Level {Level}");
-            Name = newName;
-
+            return $"{""}Etg";
         }
+
+
     }
 
 

@@ -2,6 +2,8 @@
 {
     using Ovning_3.Actions;
     using Ovning_3.Pokemons;
+    using System.Collections;
+    using System.Collections.Generic;
     using Utils;
 
     internal class Program
@@ -24,5 +26,7 @@
 
 
         }
+
+        
     }
 }
